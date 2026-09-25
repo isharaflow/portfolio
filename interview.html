@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sreehari Kalarickal — FAQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F6F4EF;
+    --ink: #1E1B16;
+    --ink-soft: #55503F;
+    --line: #DAD4C3;
+    --accent: #3D5A4C;
+    --accent-soft: #E4EBE5;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #17160F;
+      --ink: #EDE8DC;
+      --ink-soft: #B3AC98;
+      --line: #34321F;
+      --accent: #86B39B;
+      --accent-soft: #22281F;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #17160F;
+    --ink: #EDE8DC;
+    --ink-soft: #B3AC98;
+    --line: #34321F;
+    --accent: #86B39B;
+    --accent-soft: #22281F;
+  }
+
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100%;
+  }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: clamp(2.5rem, 6vw, 5rem) clamp(1.25rem, 5vw, 2rem) 5rem;
+  }
+
+  header {
+    margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2rem;
+  }
+
+  .kicker {
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    margin: 0 0 0.6rem;
+  }
+
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    line-height: 1.15;
+    margin: 0 0 0.75rem;
+    letter-spacing: -0.01em;
+  }
+
+  header p {
+    color: var(--ink-soft);
+    font-size: 1.02rem;
+    line-height: 1.6;
+    max-width: 55ch;
+    margin: 0;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  details {
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: transparent;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+  }
+
+  details[open] {
+    border-color: var(--accent);
+  }
+
+  summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 1.15rem 1.25rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.9rem;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.08rem;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  summary::-webkit-details-marker { display: none; }
+
+  .q-num {
+    flex: 0 0 auto;
+    color: var(--accent);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: var(--accent-soft);
+    border-radius: 50%;
+    width: 1.65rem;
+    height: 1.65rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.1rem;
+  }
+
+  .q-text { flex: 1; }
+
+  .chev {
+    flex: 0 0 auto;
+    width: 1.1rem;
+    height: 1.1rem;
+    color: var(--ink-soft);
+    transition: transform 0.25s ease;
+    margin-top: 0.2rem;
+  }
+
+  details[open] .chev { transform: rotate(180deg); color: var(--accent); }
+
+  .answer {
+    padding: 0 1.25rem 1.4rem calc(1.25rem + 1.65rem + 0.9rem);
+    color: var(--ink-soft);
+    font-size: 0.98rem;
+    line-height: 1.65;
+    max-width: 62ch;
+  }
+
+  @media (max-width: 480px) {
+    .answer { padding-left: 1.25rem; }
+  }
+
+  summary:focus-visible,
+  details:focus-within {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .chev, details { transition: none; }
+  }
+
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <p class="kicker">Frequently asked questions</p>
+      <h1>Sreehari Kalarickal</h1>
+      <p>A quick set of answers I get asked often — from where I started to what I'm looking for next.</p>
+    </header>
+
+    <div class="faq-list">
+      <details open>
+        <summary>
+          <span class="q-num">1</span>
+          <span class="q-text">About myself</span>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </summary>
+        <div class="answer">
+          Hi, I'm Sreehari Kalarickal, and I'm originally from Mankada, Malappuram. I started my career as a Graphic Designer at ASCO Graphics in Perinthalmanna, where I built a strong foundation in visual communication. Later, I transitioned into web development, rapidly learning and building responsive and SEO-friendly websites. Currently, I leverage modern AI tools to create innovative digital products that drive business success.
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="q-num">2</span>
+          <span class="q-text">What roles did you work in at your previous company?</span>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </summary>
+        <div class="answer">
+          At Pagematics, I focused on creating responsive and SEO-friendly websites using HTML, CSS, and Bootstrap, ensuring they were thoroughly optimized. Additionally, my work included video editing, crafting banner designs, and developing UI layouts for apps using Figma and Adobe XD, while collaborating closely with back-end developers.
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <span class="q-num">3</span>
+          <span class="q-text">Current CTC and salary expectation</span>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </summary>
+        <div class="answer">
+          My current CTC is 5 lakhs. Based on my skills and the role requirements, I am expecting a CTC of at least 7 lakhs, though I am open to discussing this further depending on the complete compensation package.
+        </div>
+      </details>
+    </div>
+
+    <footer>
+      Click a question to expand or collapse the answer.
+    </footer>
+  </div>
+</body>
+</html>
