@@ -37,12 +37,21 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.sreeharikalarickal.com/#hero"},{"@type":"ListItem","position":2,"name":"About","item":"https://www.sreeharikalarickal.com/#about"},{"@type":"ListItem","position":3,"name":"Skills","item":"https://www.sreeharikalarickal.com/#skills"},{"@type":"ListItem","position":4,"name":"Services","item":"https://www.sreeharikalarickal.com/#services"},{"@type":"ListItem","position":5,"name":"Resume","item":"https://www.sreeharikalarickal.com/#resume"},{"@type":"ListItem","position":6,"name":"Portfolio","item":"https://www.sreeharikalarickal.com/#portfolio"},{"@type":"ListItem","position":7,"name":"FAQ","item":"https://www.sreeharikalarickal.com/#faq"},{"@type":"ListItem","position":8,"name":"Contact","item":"https://www.sreeharikalarickal.com/#contact"}]}</script>
 	<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GLDW9TCCEP"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-GLDW9TCCEP');
+</script>
+<script>
+  // If reCAPTCHA is still loading, grecaptcha will be undefined.
+  grecaptcha.ready(function(){
+    grecaptcha.render("container", {
+      sitekey: "6Ld_Kt0tAAAAABi_MO_0rcpACAwm6Cz1-IH-B-Mj"
+    });
+  });
 </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -521,7 +530,6 @@
 
 <a href="https://wa.me/918907222751" id="wtsp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp"></i></a>
 <a href="#hero" id="btt" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 <script src="assets/js/main.min.js" defer></script>
 <script>
